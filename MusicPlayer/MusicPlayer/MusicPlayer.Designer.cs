@@ -1,6 +1,6 @@
 ﻿namespace MusicPlayer
 {
-    partial class Form1
+    partial class MusicPlayer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SelectFile = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // SelectSong
+            // 
+            this.SelectFile.Location = new System.Drawing.Point(39, 52);
+            this.SelectFile.Name = "SelectSong";
+            this.SelectFile.Size = new System.Drawing.Size(75, 23);
+            this.SelectFile.TabIndex = 0;
+            this.SelectFile.Text = "Select Song";
+            this.SelectFile.UseVisualStyleBackColor = true;
+            this.SelectFile.Click += new System.EventHandler(this.SelectSong);
+            // 
+            // MusicPlayer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.SelectFile);
+            this.Name = "MusicPlayer";
+            this.Text = "Music Player";
+            this.ResumeLayout(false);
+
         }
 
-        #endregion
+        #endregion        
     }
 }
 

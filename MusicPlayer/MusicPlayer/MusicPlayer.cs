@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MusicPlayer
 {
-    public partial class Form1 : Form
+    public partial class MusicPlayer : Form
     {
-        public Form1()
+        public MusicPlayer()
         {
             InitializeComponent();
+        }
+
+        private void SelectSong(object sender, EventArgs e)
+        {
+
         }
     }
 }
