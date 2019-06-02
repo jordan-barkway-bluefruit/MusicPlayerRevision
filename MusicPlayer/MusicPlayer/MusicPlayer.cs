@@ -4,7 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+<<<<<<< HEAD
 using System.Media;
+=======
+>>>>>>> AbilityToOpenFiles
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,11 +21,36 @@ namespace MusicPlayer
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         // This button allows the media to be played using the built in sound player
         private void Play(object sender, EventArgs e)
         {
             SoundPlayer songSelected = new SoundPlayer(@"c:\Windows\Media\chord.wav");
             songSelected.Play();
+=======
+        private void SelectSong(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                InitialDirectory = @"C:\Windows\media",
+                Title = "Browse Audio Files",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "wav",
+                Filter = "wav | *",
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = openFileDialog1.FileName;
+            }
+>>>>>>> AbilityToOpenFiles
         }
     }
 }
